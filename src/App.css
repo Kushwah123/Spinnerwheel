@@ -1,38 +1,159 @@
+
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.coupon-wheel {
+  text-align: center;
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wheel {
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgb(228, 10, 10);
+  margin: 20px auto;
+  position: relative;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+}
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.spinning {
+  /* Add animations or transitions to rotate the wheel */
+  animation: spin 2s infinite linear;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.prize {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+
+li:first-child .text {
+  background-color: #ff5722;
+}
+li:nth-child(2) .text {
+  background-color: #5222ff;
+}
+li:nth-child(3) .text {
+  background-color: #22ff90;
+}
+li:nth-child(4) .text {
+  background-color: #850b60;
+}
+li:nth-child(5) .text {
+  background-color: #98df14;
+}
+li:nth-child(6) .text {
+  background-color: #2c1581;
+}
+li:nth-child(7) .text {
+  background-color: #6dac1c;
+}
+li:nth-child(8) .text {
+  background-color: #fdae1a;
+}
+li:nth-child(9) .text {
+  background-color: #7722ff;
+}
+li:nth-child(10) .text {
+  background-color: #5222ff;
+}
+li:nth-child(11) .text {
+  background-color: #ff22f4;
+}
+li:nth-child(12) .text {
+  background-color: #22ff85;
+}
+
+li:first-child{
+  transform:  rotate(0deg) skewY(-60deg);
+}
+li:nth-child(2){
+  transform:  rotate(30deg) skewY(-60deg);
+}
+li:nth-child(3){
+  transform:  rotate(60deg) skewY(-60deg);
+}
+li:nth-child(4){
+  transform:  rotate(90deg) skewY(-60deg);
+}
+li:nth-child(5){
+  transform:  rotate(120deg) skewY(-60deg);
+}
+li:nth-child(6){
+  transform:  rotate(150deg) skewY(-60deg);
+}
+li:nth-child(7){
+  transform:  rotate(180deg) skewY(-60deg);
+}
+li:nth-child(8){
+  transform:  rotate(210deg) skewY(-60deg);
+}
+li:nth-child(9){
+  transform:  rotate(240deg) skewY(-60deg);
+}
+li:nth-child(10){
+  transform:  rotate(270deg) skewY(-60deg);
+}
+li:nth-child(11){
+  transform:  rotate(300deg) skewY(-60deg);
+}
+li:nth-child(12){
+  transform:  rotate(330deg) skewY(-60deg);
+}
+li {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+.text{
+  position: absolute;
+  left: -100%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display: block;
+  transform: skewY(60deg) rotate(15deg);
+  padding-top: 20px;
+  cursor: pointer;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid black;
+  position: absolute;
+  left: 50%;
+  /* top: -20%; */
+  z-index: 1;
+  
+}
+
+
